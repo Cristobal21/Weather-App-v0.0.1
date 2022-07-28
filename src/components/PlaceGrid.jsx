@@ -1,15 +1,11 @@
-
 import { useFetchPlaces } from "../hooks/useFetchPlaces"
-import { useFetchWeather } from "../hooks/useFetchWeather"
 import { PlaceItem } from "./PlaceItem"
-import { WeatherDetail } from "./weather/WeatherDetail"
-
+import PropTypes from 'prop-types'
 
 
 export const PlaceGrid = ({ lugar }) => {
 
     const { lugares } = useFetchPlaces( lugar )
- 
     
     return (
         <>
@@ -28,4 +24,9 @@ export const PlaceGrid = ({ lugar }) => {
             </div>
         </>
     )
+}
+
+
+PlaceGrid.propTypes = {
+    lugar: PropTypes.string.isRequired
 }

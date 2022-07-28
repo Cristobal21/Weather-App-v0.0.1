@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pruebas en <WeatherApp/> Debe hacer match con el snapshot 1`] = `
+<div>
+  <h1
+    class="title-app mb-5 mt-5"
+  >
+    Wheater App v0.0.1
+  </h1>
+  <form
+    aria-label="form"
+    class=""
+  >
+    <div>
+      <input
+        class="form-control"
+        placeholder="Busca un lugar, país o ciudad"
+        type="text"
+        value=""
+      />
+    </div>
+  </form>
+  <p
+    class="mt-3"
+  >
+    Última búsqueda realizada: miami
+  </p>
+  <hr />
+  <div />
+</div>
+`;

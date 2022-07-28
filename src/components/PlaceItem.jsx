@@ -5,7 +5,8 @@ import { ListGroup } from "react-bootstrap"
 export const PlaceItem = ({ name }) => {
 
     const handleClick = () => {
-        
+        //Hacer el redireccion a weathergrid o weatherdetail
+        console.log('Hola hiciste click en > ', name);
     }
 
     return (

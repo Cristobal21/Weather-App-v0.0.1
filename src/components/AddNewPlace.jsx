@@ -1,5 +1,7 @@
 import { useState } from "react"
 import { Form } from 'react-bootstrap'
+import PropTypes from 'prop-types'
+
 
 export const AddNewPlace = ({ onNewPlace }) => {
 
@@ -18,7 +20,7 @@ export const AddNewPlace = ({ onNewPlace }) => {
     
     return (
 
-        <Form onSubmit={ onSubmit }>
+        <Form onSubmit={ onSubmit } aria-label="form" >
             <Form.Group>
                 <Form.Control 
                     type="text" 
@@ -30,4 +32,8 @@ export const AddNewPlace = ({ onNewPlace }) => {
         </Form>
 
     )
+}
+
+AddNewPlace.propTypes = {
+    onNewPlace: PropTypes.func.isRequired,
 }

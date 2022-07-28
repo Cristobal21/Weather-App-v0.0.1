@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pruebas en <PlaceItem/> Debe hacer match con el snapshot 1`] = `
+<div>
+  <div
+    class="list-group"
+  >
+    <button
+      class="mb-2 list-group-item list-group-item-info list-group-item-action"
+    >
+      <p>
+        Buin, Santiago Metropolitan, Chile
+      </p>
+    </button>
+  </div>
+</div>
+`;

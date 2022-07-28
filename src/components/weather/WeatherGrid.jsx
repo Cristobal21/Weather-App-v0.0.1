@@ -1,5 +1,6 @@
 import { useFetchWeather } from "../../hooks/useFetchWeather"
 import { WeatherDetail } from "./WeatherDetail"
+import PropTypes from 'prop-types'
 
 
 
@@ -25,4 +26,9 @@ export const WeatherGrid = ({ lugar }) => {
             </div>
         </>
     )
+}
+
+
+WeatherGrid.propTypes = {
+    lugar: PropTypes.string.isRequired
 }

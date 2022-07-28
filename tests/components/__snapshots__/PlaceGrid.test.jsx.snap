@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pruebas en <PlaceGrid/> Debe de hacer match con el snapshot 1`] = `
+<div>
+  <p
+    class="mt-3"
+  >
+    Última búsqueda realizada: Buin
+  </p>
+  <hr />
+  <div />
+</div>
+`;
