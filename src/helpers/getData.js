@@ -15,6 +15,7 @@ export const getData = async ( lugar ) => {
             lat: lugar.center[1]
         },
         title: lugar.text,
+        country: lugar.context[lugar.context.length - 1].text
     }))
 
     return data

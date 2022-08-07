@@ -1,8 +1,7 @@
 import { useState } from "react"
+
 import { AddNewPlace } from "./components/AddNewPlace"
 import { PlaceGrid } from "./components/PlaceGrid"
-// import { WeatherGrid } from "./components/weather/WeatherGrid"
-
 
 
 function WeatherApp() {
@@ -24,14 +23,14 @@ function WeatherApp() {
 
       {
         lugares.map((lugar) => (
-          
+
           <PlaceGrid
             key={lugar}
             lugar={lugar}
           />
-            
+
         ))
-      }      
+      }
     </>
   )
 }

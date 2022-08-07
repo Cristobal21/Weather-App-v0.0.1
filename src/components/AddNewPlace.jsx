@@ -24,7 +24,7 @@ export const AddNewPlace = ({ onNewPlace }) => {
             <Form.Group>
                 <Form.Control 
                     type="text" 
-                    placeholder="Busca un lugar, país o ciudad"
+                    placeholder="Busca un lugar o ciudad"
                     value={ inputValue }
                     onChange={ onInputChange }
                 />

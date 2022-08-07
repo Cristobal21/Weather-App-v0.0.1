@@ -1,8 +1,9 @@
 
 
-export const getClima = async ( lugar ) => {
+export const getClima = async ( latitud, longitud ) => {
 
-    const url = `https://api.openweathermap.org/data/2.5/weather?q=${ lugar }&appid=87a6024cfb90c7b58391cb691253d6fa&units=metric&lang=es`
+    const url = `https://api.openweathermap.org/data/2.5/weather?lat=${ latitud }&lon=${ longitud }&appid=87a6024cfb90c7b58391cb691253d6fa&units=metric&lang=es`
+    // const url = `https://api.openweathermap.org/data/2.5/weather?q=${ lugar }&appid=87a6024cfb90c7b58391cb691253d6fa&units=metric&lang=es`
     const resp = await fetch(url)
     const {
         coord,
@@ -15,32 +16,27 @@ export const getClima = async ( lugar ) => {
         weather
     } = await resp.json()
 
+    const { lat, lon } = coord
+    const { humidity, temp, temp_min, temp_max } = main
+    const { country } = sys
+    const { speed } = wind
+    const { description } = weather
 
     const dataWeather = {
         id,
-        name,
+        nombre: name,
         visibility,
-        coord : {
-            lon: coord.lon,
-            lat: coord.lat,
-        },
-        main : {
-            humedad: main.humidity,
-            temp: main.temp,
-            min: main.temp_min,
-            max: main.temp_max,
-        },
-        sys : {
-            pais: sys.country,
-            id: sys.id
-        },
-        wind : {
-            velocidad: wind.speed
-        },
-        weather : {
-            estado: weather[0].description
-        },
+        lon,
+        lat,
+        humidity,
+        temp,
+        temp_min,
+        temp_max,
+        country,
+        speed,
+        description,
     }
+
 
     // console.log(dataWeather)
 
